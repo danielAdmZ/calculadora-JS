@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: #181713;
+}
+
+body{
+    background-image: linear-gradient(rgba(243, 227, 186, 0.533), rgba(0, 0, 0, 0.322)) ,url("../img/abstract-earth-tone-paint-white.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
+    /* backdrop-filter: blur(1px); */
+}
+.container-cal{
+    padding: 1rem;
+}
+.calculadora{
+    
+    padding: 1rem;
+    text-align: right;
+    display: grid;
+    margin: 5rem auto;
+   background-color:#F3e3ba;
+   width: 25%;
+   justify-items: flex-end;
+   border-radius: 1.3rem;
+   border: #faf4e3  solid;
+}
+.calculadora p{
+    margin-top: 5rem;
+    width: 100%;
+    font-size: 1.9rem;
+    font-weight: 100;
+}
+.calculadora input {
+    font-size: 4rem;
+    background-color: #d8d1c200;
+    width: 100%;
+    text-align: right;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.3rem;
+}
+.calculadora-button {
+    
+}
+.calculadora-button button{
+    font-weight: 600;
+    font-size: 2.5rem;
+    background-color: #e6c365;
+    border: none;
+    padding: 1.1rem;
+    max-width: 7rem;
+    width: 7rem;
+    border-radius: 0.3rem;
+    transition: all 0.2s ease;
+}
+
+
+
+.calculadora-button button:hover{
+    cursor: pointer;
+}
+
+.calculadora-button button:active, #dif-back:active{
+    background-color: #dba40f;
+    transform: scale(110%);
+}
+
+#dif-back{
+    background-color: #d8d1c2;
+}
+
+
+
+
