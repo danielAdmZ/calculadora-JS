@@ -3,44 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Calculadora JS</title>
 </head>
-<body>
-    <main>
-        <div class="container-cal">
-            <div class="calculadora">
-                <p>1</p>
-                <textarea name="" id="" cols="10" rows="1"></textarea>
+<body onkeydown="detectarTecla(event)">
+    <main >
+        <div class="container-cal" >
+            <div class="calculadora" >
+                <p id="anterior">0</p>
+                <!-- <textarea name="" id="" cols="10" rows="1"></textarea> -->
+                <input type="text" tabindex="1" id="panel-num" placeholder="0" value="">
                 <div class="calculadora-button">
                     <table>
                         <tr>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>+</td>
+                            <td><button tabindex="2" onclick="onClickClear()">AC</button></td>
+                            <td><button onclick="onClickOperator('%')"><i class="bi bi-percent"></i></button></td>
+                            <td><button><i class="bi bi-plus-slash-minus"></i></button></td>
+                            <td><button onclick="onClickOperator('/')">/</button></td>
                         </tr>
                         <tr>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>-</td>
+                            <td><button id="dif-back" onclick="onClickB(7)">7</button></td>
+                            <td><button id="dif-back" onclick="onClickB(8)">8</button></td>
+                            <td><button id="dif-back" onclick="onClickB(9)">9</button></td>
+                            <td><button onclick="onClickOperator('*')">x</button></td>
                         </tr>
                         <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>/</td>
+                            <td><button id="dif-back" onclick="onClickB(4)">4</button></td>
+                            <td><button id="dif-back" onclick="onClickB(5)">5</button></td>
+                            <td><button id="dif-back" onclick="onClickB(6)">6</button></td>
+                            <td><button onclick="onClickOperator('-')"><i class="bi bi-dash-lg"></i></button></td>
                         </tr>
                         <tr>
-                            <td>0</td>
-                            <td>%</td>
-                            <td>*</td>
-                            <td><button>=</button></td>
+                            <td><button id="dif-back" onclick="onClickB(1)">1</button></td>
+                            <td><button id="dif-back" onclick="onClickB(2)">2</button></td>
+                            <td><button id="dif-back" onclick="onClickB(3)">3</button></td>
+                            <td><button onclick="onClickOperator('+')">+</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button id="dif-back" onclick="onClickB(0)">0</button></td>
+                            <td><button id="dif-back"onclick="onClickB('.')">.</button></td>
+                            <td><button tabindex="3" onclick="opRealizar()">=</button></td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
-    </main>    
+    </main> 
+    <script src="js/app.js"></script>   
 </body>
 </html>
