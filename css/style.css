@@ -41,9 +41,9 @@ body{
     border: none;
     border-radius: 0.3rem;
 }
-.calculadora-button {
+/* .calculadora-button {
     
-}
+} */
 .calculadora-button button{
     font-weight: 600;
     font-size: 2.5rem;
